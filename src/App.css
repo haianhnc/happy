@@ -1,0 +1,500 @@
+/*HEADER*/
+.header {
+  width: calc(100vw - 20px);
+  height: calc((100vw - 20px) * 0.5625);
+  background: yellow;
+  position: relative;
+}
+
+.header .menu {
+  height: 30%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 12vmin;
+  line-height: 15vmin;
+}
+
+
+.header .menu .img_left {
+  max-height: 100%;
+  width: 15%;
+  align-content: left;
+  display: inline-block;
+  float: left;
+  /*margin: 10px 0px 0px 0px;*/
+}
+
+.header .menu .h111 {
+  vertical-align: middle;
+}
+.header .menu .img_right {
+  max-height: 100%;
+  width: 15%;
+  align-content: right;
+  display: inline-block;
+  float: right;
+}
+
+.header .bar{
+  position: absolute;
+  height: 30%;
+  width: 100%;
+  bottom: 0;
+
+}
+
+.header .bar ul {
+    list-style-type: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+} 
+
+.header .bar li {
+    text-align: center;
+    display: inline;
+    height: 100%;
+    width: 20%;
+    float: left;
+}
+
+.header .bar a {
+  max-height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 8vmin;
+  line-height: 16vmin;
+  text-decoration: none;
+}
+
+.tab-link .tab-link-active {
+  text-decoration: underline !important;
+}
+
+/*HEADER*/
+
+/*CONTEST*/
+.contest {
+  background: blue;
+  width: calc(100vw - 20px);
+  height: calc((100vw - 20px) * 0.5625);
+}
+
+.contest .body {
+  width: 70%;
+}
+
+.contest .ranking {
+  height: 70%;
+}
+
+.contest .ranking .img_left {
+  height: 100%;
+  width: 15%;
+  display: inline-block;
+  float: left;
+}
+
+.contest .ranking .img_left img{
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.contest .ranking .img_right {
+  height: 100%;
+  max-width: 15%;
+  display: inline-block;
+  float: right;
+  vertical-align: middle;
+}
+
+.contest .ranking .img_right img{
+  max-height: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.contest .contest_body {
+  height: 100%;
+  display: inline-block;
+  width: 70%;
+  background-color: yellow;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+.contest .contest_body .title{
+  height: 30%;
+  font-size: 7vmin;
+  line-height: 11vmin;
+  font-weight: bold;
+  display: block;
+}
+
+.contest .contest_body .ranking_date{
+  height: 25%;
+  width: 100%;
+  font-size: 6vmin;
+  line-height: 10vmin;
+  vertical-align: middle;
+  display: inline-block;
+}
+.contest .contest_body .contest_user{
+  height: 25%;
+  width: 100%;
+  font-size: 6vmin;
+  line-height: 10vmin;
+  font-weight: bold;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.contest .contest_body .star_bar {
+  height: 20%;
+  line-height: 7vmin;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.contest .contest_body .star_bar .star_icon {
+  vertical-align: middle;
+  max-width: 6vmin;
+  max-height: 6vmin;
+}
+
+.rankingContent {
+  height: 20%;
+  text-align: center;
+  font-size: 6vmin;
+  line-height: 10vmin;
+  display: block;
+}
+
+.ShowMoreButton {
+  height: 10%;
+  line-height: 4vmin;
+  text-align: center;
+  font-size: 4vmin;
+  display: block;
+}
+
+.ShowMoreButton a {
+  text-decoration-color: gray !important;
+}
+/*CONTEST*/
+
+/*PICKUP*/
+.PickUpUnit {
+  width: 205px;
+  height: 290px;
+  background-color: green;
+}
+
+.PickUpUnit .title {
+  margin-top: 10px;
+  height: 25px;
+  float: center;
+  text-align: center;
+}
+
+.PickUpUnit .title h1{
+  margin:auto;
+  vertical-align:middle;
+  width: 205px;
+  font-size: 18px;
+  display: inline;
+}
+
+.PickUpUnit .pickup_image {
+  display: inline-block;
+  padding: 0px 40px 0px 40px;
+}
+
+.PickUpUnit .pickup_content {
+  width: 170px;
+  height: 25px;
+  display: inline-block;
+  text-align: center;
+  padding: 0px 0px 0px 20px;
+  font-size: 10px;
+}
+
+/*PICKUP*/
+
+/*COMMONUNIT*/
+.CommonUnit .title {
+  height: 30px;
+  width: 205px;
+  text-align: center;
+  margin:auto;
+  vertical-align: middle;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.CommonUnit .title h1 {
+  font-size: 16px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline;
+  padding: 0px 0px 0px 0px;
+}
+
+.CommonUnit .content {
+  width: 185px;
+  padding: 0px 10px 0px 10px;
+}
+
+.CommonUnit .content .VerticalUnit {
+  height: 100px;
+  display: inline-block;
+}
+
+.CommonUnit .content .VerticalUnit .verticalunit_image {
+  width: 92.5px;
+}
+
+.CommonUnit .content .VerticalUnit .verticalunit_image img{
+  width: 87.5px;
+  height: auto;
+  max-width: 87.5px;
+  float: center;
+}
+
+.CommonUnit .content .VerticalUnit .text {
+  width: 87.5px;
+  height: 20px;
+  font-size: 9px;
+  display: inline-block;
+}
+
+.LoveButton {
+  height: 10px;
+  text-align: right;
+}
+
+.LoveButton .lovebutton_heart {
+  width: 60px;
+  display: inline;
+}
+
+.LoveButton .lovebutton_text {
+  font-size: 8px;
+  padding-left: 10px;
+  text-align: right;
+  display: inline;
+}
+
+/*COMMONUNIT*/
+
+
+
+/*RANKINGUNIT*/
+.RankingUnit {
+  width: 205PX;
+}
+
+.RankingUnit .title {
+  height: 30px;
+  width: 205px;
+  text-align: center;
+  margin:auto;
+  vertical-align: middle;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.RankingUnit .title h1{
+  font-size: 16px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline;
+  padding: 0px 0px 0px 0px;
+}
+
+.RankingUnit .rank_rows .RankRow {
+  height: 35px;
+  width: 205;
+}
+
+.RankingUnit .rank_rows .RankRow .rank_row_image {
+  display: inline-block;
+  width: 40px;
+}
+
+.RankingUnit .rank_rows .RankRow .rank_row_content {
+  display: inline-block;
+  float: right;
+  height: 35px;
+  width: 155px;
+}
+
+.RankingUnit .rank_rows .RankRow .rank_row_content .no_and_tag {
+  height: 10px;
+  display: block;
+  box-shadow: 0.1px;
+
+}
+
+.RankingUnit .rank_rows .RankRow .rank_row_content .no_and_tag .rank_no_image {
+  height: 10px;
+  width: 15px;
+  display: inline-block;
+  float: left;
+}
+
+.RankingUnit .rank_rows .RankRow .rank_row_content .no_and_tag .rank_no_tiny_text {
+  height: 10px;
+  display: inline-block;
+  font-size: 8px;
+  float: left;
+}
+
+.RankingUnit .rank_rows .RankRow .rank_row_content .no_and_tag .rank_no {
+  height: 10px;
+  display: inline-block;
+  float: left;
+}
+
+.RankingUnit .rank_rows .RankRow .rank_row_content .no_and_tag .rank_tag {
+  float: right;
+  background-color: black;
+  color: white;
+  height: 10px;
+  width: 35px;
+  font-size: 8px;
+  display: inline-block;
+  text-align: center;
+}
+
+.RankingUnit .rank_rows .RankRow .rank_row_content .rank_row_text {
+  height: 20px;
+  display: block;
+  font-size: 10px;
+}
+/*RANKINGUNIT*/
+
+/*HozontialUnit*/
+.horizon_unit {
+/*  padding-top: 8px;*/
+  height: 25px;
+  margin-left: 15px;
+  display: block;
+  background-color: pink;
+  box-shadow: inset 0 0.2px 0 black;
+}
+
+.horizon_unit .horizon_unit_image{
+  padding-right: 10px;
+  height: 25px;
+  display: inline;
+}
+
+
+.horizon_unit .horizon_unit_content{
+  display: inline-block;
+  position: relative;
+  width: 135px;
+  height: 25px;
+}
+
+.horizon_unit .horizon_unit_content .horizon_tag{
+  width: 30px;
+  height: 5px;
+  font-size: 5px;
+  color: white;
+  background-color: black;
+}
+
+.horizon_unit .horizon_unit_content .horizon_text{
+  height: 20px;
+  width: 125px;
+  text-align: left;
+  font-size: 6px;
+}
+
+/*HozontialUnit*/
+
+/*TodayBestFriend*/
+.TodayBestFriend {
+  width: 205px;
+  height: 80px;
+  background-color: grey;
+}
+
+.TodayBestFriend .title {
+  height: 30px;
+  text-align: center;
+  margin:auto;
+  vertical-align: middle;
+  font-size: 16px;
+  display: inline;
+}
+
+.TodayBestFriend .title h1{
+  font-size: 16px;
+  padding: 0px 0px 0px 0px;
+}
+
+.TodayBestFriend .content {
+  height: 50px;
+  background-color: #00ffd5;
+}
+
+.TodayBestFriend .content .user_icon{
+  display: inline;
+  float: left;
+}
+
+.TodayBestFriend .content .user_info{
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+
+}
+.TodayBestFriend .content .user_info .name{
+  font-size: 13.5px;
+  text-decoration-style: bold;
+  display: inline-block;
+}
+
+.TodayBestFriend .content .user_percent{
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  float: right;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.heart {
+  height: 16px;
+}
+.heart_bar {
+  height: 16px;
+  display: inline-block;
+  text-align: left;
+}
+
+.heart_icon {
+  height: 16px;
+  display: inline-block;
+}
+.GotoLineButton {
+  height: 10px;
+}
+.GotoLineButton a{
+  font-size: 8px;
+  height: 8px;
+  display: inline;
+  text-align: center;
+  top: 0px;
+  left: 0px;
+  background-color: transparent !important;
+} 
+
+/*TodayBestFriend*/
+
+
+

@@ -1,0 +1,7 @@
+Mình định hướng sử dụng Reactjs Framework nhé
+Để đảm bảo việc này, mình sẽ tập trung vào training Javascript cơ bản, chuẩn ES6 nhé, tài liệu em tham khảo tại:https://docs.microsoft.com/en-us/scripting/javascript/javascript-language-reference
+Framework: https://facebook.github.io/react/
+Dependencies: 
+   + http://redux.js.org/
+   + https://webpack.github.io/
+về Output của giai đoạn training này cần: Nắm vững ES6, làm việc được với ReactJS(cụ thể qua output của giao diện bên trên)
