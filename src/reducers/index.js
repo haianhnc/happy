@@ -1,6 +1,8 @@
 import {combineReducers} from 'redux';
-import track from './track';
+import {header_reducer} from './header';
+import {tracks_reducer} from './track'
 
-export default combineReducers({
-	track
+export const rootReducer = combineReducers({
+    header_state: header_reducer,
+    tracks_state: tracks_reducer
 });

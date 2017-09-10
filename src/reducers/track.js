@@ -2,16 +2,11 @@ import {ActionTypes} from '../core/constants';
 
 const initState = [];
 
-export default function(state = initState, action){
+export const tracks_reducer =function(state = initState, action){
 	switch(action.type){
 		case ActionTypes.TRACKS_SET: 
 			return setTracks(state, action);
 	}
-
-
-	// let new_track = {id: 3, title: 'em cua ngay hom kia'};
-
-	// return [...state, new_track];
 	return state;
 }
 

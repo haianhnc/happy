@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+
 import PropTypes from 'prop-types';
 import { Tabs, TabLink, TabContent } from './tabs';
 
@@ -15,6 +17,7 @@ class Header extends Component {
   };
 
   render(){
+    debugger;
     let header_title = this.props.header.title;
     let menu_lists = this.props.header.menu_list;
     let rows = [];
@@ -24,18 +27,45 @@ class Header extends Component {
     });
 
     return(
-      <div className="header">
-        <div className="menu">
-          <img className="img_left" src={left_menu}/>
-          <h111>{ header_title }</h111>
-          <img  className="img_right" src={close_button} />
-        </div>
-        <div className="bar">
-          <Tabs><ul>{rows}</ul></Tabs>
-        </div>
+    <div className="header">
+      <div className="menu">
+        <img className="img_left" src={left_menu}/>
+        <h111>{ header_title }</h111>
+        <img  className="img_right" src={close_button} />
       </div>
-      );
+      <div className="bar">
+        <Tabs><ul>{rows}</ul></Tabs>
+      </div>
+    </div>
+    );
+
   }
 }
 
-export default Header;
+
+function mapStateToProps(state){
+  const header = state.header_state;
+  return {header}
+}
+export default connect(mapStateToProps)(Header);
+
+
+// export default connect(({track}) => ({tracks: track}))(TrackList);
+// export default Header;
+
+// @connect(({tracks}) => ({tracks}), {})
+// export default class TrackList extends Component {}
+
+
+// return(
+//   <div className="header">
+//     <div className="menu">
+//       <img className="img_left" src={left_menu}/>
+//       <h111>{ header_title }</h111>
+//       <img  className="img_right" src={close_button} />
+//     </div>
+//     <div className="bar">
+//       <Tabs><ul>{rows}</ul></Tabs>
+//     </div>
+//   </div>
+//   );

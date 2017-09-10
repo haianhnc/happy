@@ -1,4 +1,12 @@
 import React, { Component } from 'react';
+import {Provider} from 'react-redux';
+
+//Store, actions
+import * as actions from './actions';
+import {configureStore} from './stores/header_store';
+
+
+//Component
 import Header from './components/Header/Header';
 import TodayContestRanking from "./components/TodayContestRanking/TodayContestRanking"
 import PickUpUnit from "./components/PickUpUnit/PickUpUnit"
@@ -9,26 +17,11 @@ import Psychological from "./components/Psychological/Psychological"
 import ExpertUnit from "./components/ExpertUnit/ExpertUnit"
 import Tags from "./components/Tags/Tags"
 
+import TrackList from './components/TrackList/TrackList'
+
 import style from './App.css';
 
-class MainBoard extends Component {
-  
- render(){
-    return(
-        <div className="App">
-          <Header header={this.props.header} />
-          <TodayContestRanking contest={this.props.contest} />
-          <PickUpUnit pickupunit={this.props.pickupunit} />
-          <TodayBestFriend bestfriend={this.props.bestfriend} />
-          <RankingUnit rankingunit={this.props.rankingunit} />
-          <CommonUnit common={this.props.common}/>
-          <Psychological psychological={this.props.psychological}/>
-          <ExpertUnit experts={EXPERTS}/>
-          <Tags tags={TAGS}/>
-        </div>
-    );
-  }
-}
+
 
 var HEADER = {title: 'Happy', menu_list: ['tab1', 'tab2', 'tab3', 'tab4', 'tab5'], left_menu_button: 'left_menu.png', close_button: 'close_button.png'}
 var CONTEST = {title: 'today fortune', name: 'AAAAA', left_icon: '../images/left.png', right_icon: '../images/left.png', star: '3', content: 'you are lucky'}
@@ -39,22 +32,78 @@ var COMMON = {title: 'foryou', vertical_units: [{icon: 'icon1.jpg', content: 'th
 var PSYCHOLOICAL = {title: 'psychological unit', holizo_units: [{icon: 'icon.jpg', content: 'psychological content'}, {icon: 'icon.jpg', content: 'psychological content2 xxxewqrewrqwedsafwerq'}]}
 var EXPERTS = {title: 'Writer', cicler_units: [{icon: 'icon.jpg', content: 'an expert do best things'}, {icon: 'icon.jpg', content: 'an expert do best things 2222'}]}
 var TAGS = {title: 'tag', tags: ['tag1', 'tag2', 'tag3', 'tag4']}
+
+
+
+
+const tracks = [
+  {
+    id: 1,
+    title: 'Em của ngày hôm qua'
+  },
+  {
+    id: 2,
+    title: 'Cơn mưa ngang qua'
+  }
+];
+
+const store = configureStore();
+// store.dispatch(actions.setTracks(tracks));
+debugger;
+store.dispatch(actions.setHeader(HEADER));
+
 class App extends Component {
-  render() {
-    return (
-      <MainBoard 
-        header={HEADER} 
-        contest={CONTEST} 
-        pickupunit={PICKUPUNIT}
-        bestfriend={BESTFRIEND}
-        rankingunit={RANKINGUNIT}
-        common={COMMON}
-        psychological= {PSYCHOLOICAL}
-        experts = {EXPERTS}
-        tags = {TAGS}
-      />
+  render(){
+    return(
+      <Provider store={store}>
+        <div className="App">
+          <TrackList />
+          <Header />
+        </div>
+      </Provider>
     );
   }
 }
+
+// class MainBoard extends Component {
+  
+//  render(){
+//     return(
+//       <div className="App">
+//         <Header header={this.props.header} />
+//         <TodayContestRanking contest={this.props.contest} />
+//         <PickUpUnit pickupunit={this.props.pickupunit} />
+//         <TodayBestFriend bestfriend={this.props.bestfriend} />
+//         <RankingUnit rankingunit={this.props.rankingunit} />
+//         <CommonUnit common={this.props.common}/>
+//         <Psychological psychological={this.props.psychological}/>
+//         <ExpertUnit experts={EXPERTS}/>
+//         <Tags tags={TAGS}/>
+//       </div>
+//     );
+//   }
+// }
+
+
+
+// class App extends Component {
+//   render() {
+//     return (
+//       <Provider store={store}>
+//         <MainBoard 
+//           header={HEADER} 
+//           contest={CONTEST} 
+//           pickupunit={PICKUPUNIT}
+//           bestfriend={BESTFRIEND}
+//           rankingunit={RANKINGUNIT}
+//           common={COMMON}
+//           psychological= {PSYCHOLOICAL}
+//           experts = {EXPERTS}
+//           tags = {TAGS}
+//         />
+//       </Provider>
+//     );
+//   }
+// }
 
 export default App;
