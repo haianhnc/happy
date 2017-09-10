@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 export const defaultActiveStyle = {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    color: 'red',
 };
 
 class TabLink extends Component {

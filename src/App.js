@@ -23,7 +23,7 @@ import style from './App.css';
 
 
 
-var HEADER = {title: 'Happy', menu_list: ['tab1', 'tab2', 'tab3', 'tab4', 'tab5'], left_menu_button: 'left_menu.png', close_button: 'close_button.png'}
+var HEADER = {title: 'Happy', menu_list: ['tab1', 'tab2', 'tab3', 'tab4', 'tab5'], left_menu_button: 'left_menu.png', close_button: 'close_button.png', active_tab: 0}
 var CONTEST = {title: 'today fortune', name: 'AAAAA', left_icon: '../images/left.png', right_icon: '../images/left.png', star: '3', content: 'you are lucky'}
 var PICKUPUNIT = {title: 'Pick up', first_feature_banner: {baner: 'baner.jpg', text: 'description for baner better than ever! do you see it?'}, data: [{image: 'row.jpg', tag: 'sport', text: 'this is a sample text for row. I love it, do you love it.'}, {image: 'row.jpg', tag: 'sport', text: 'this is a sample text for row'}, {image: 'row.jpg', tag: 'sport', text: 'this is a sample text for row'}, {image: 'row.jpg', tag: 'sport', text: 'this is a sample text for row'}] }
 var BESTFRIEND = {title: 'best friends', user: {icon: 'user.jpg', name: 'user1'}, heart: '4', percent: '100', text: 'this is best friend' }
@@ -49,7 +49,6 @@ const tracks = [
 
 const store = configureStore();
 // store.dispatch(actions.setTracks(tracks));
-debugger;
 store.dispatch(actions.setHeader(HEADER));
 
 class App extends Component {

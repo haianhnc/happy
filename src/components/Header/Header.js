@@ -17,7 +17,6 @@ class Header extends Component {
   };
 
   render(){
-    debugger;
     let header_title = this.props.header.title;
     let menu_lists = this.props.header.menu_list;
     let rows = [];
@@ -55,17 +54,3 @@ export default connect(mapStateToProps)(Header);
 
 // @connect(({tracks}) => ({tracks}), {})
 // export default class TrackList extends Component {}
-
-
-// return(
-//   <div className="header">
-//     <div className="menu">
-//       <img className="img_left" src={left_menu}/>
-//       <h111>{ header_title }</h111>
-//       <img  className="img_right" src={close_button} />
-//     </div>
-//     <div className="bar">
-//       <Tabs><ul>{rows}</ul></Tabs>
-//     </div>
-//   </div>
-//   );

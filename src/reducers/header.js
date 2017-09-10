@@ -11,7 +11,6 @@ export const header_reducer = function(state = initialState, action){
 }
 
 function setHeader(state, action){
-  debugger;
   const {header} = action;
   var new_state = Object.assign({}, header);
 
