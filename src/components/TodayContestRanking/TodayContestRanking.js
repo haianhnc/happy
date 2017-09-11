@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 
 import Starbar from './Starbar'
 import ShowMoreButton from './ShowMoreButton'
 
-class TodayContestRanking extends Component {
+export class TodayContestRanking extends Component {
   static PropTypes = {
     contest: PropTypes.object.isRequired
   };
@@ -45,11 +44,3 @@ class TodayContestRanking extends Component {
       );
   }
 }
-
-// export default TodayContestRanking;
-
-function mapStateToProps(state){
-  const contest = JSON.parse(JSON.stringify(state.today_contest_ranking_state));;
-  return {contest}
-}
-export default connect(mapStateToProps)(TodayContestRanking);

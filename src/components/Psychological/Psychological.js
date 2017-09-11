@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 
 import HolizoUnit from "./HolizoUnit"
 
-class Psychological extends Component {
+export class Psychological extends Component {
   static PropTypes = {
     pickupunit: PropTypes.object.isRequired
   };
@@ -32,11 +31,3 @@ class Psychological extends Component {
     );
   }
 }
-
-// export default Psychological;
-
-function mapStateToProps(state){
-  const psychological = JSON.parse(JSON.stringify(state.psychological_state));;
-  return {psychological}
-}
-export default connect(mapStateToProps)(Psychological);

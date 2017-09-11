@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 
 import OneTag from "./OneTag"
 
-class Tags extends Component {
+export class Tags extends Component {
   static PropTypes = {
     tags: PropTypes.object.isRequired
   };
@@ -31,9 +30,3 @@ class Tags extends Component {
     );
   }
 }
-
-function mapStateToProps(state){
-  const tags = JSON.parse(JSON.stringify(state.tags_state));;
-  return {tags}
-}
-export default connect(mapStateToProps)(Tags);

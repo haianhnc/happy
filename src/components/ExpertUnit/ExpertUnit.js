@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 
 import CircleUnit from "./CircleUnit";
 
-class ExpertUnit extends Component {
+export class ExpertUnit extends Component {
   static PropTypes = {
     experts: PropTypes.object.isRequired
   };
@@ -32,11 +31,3 @@ class ExpertUnit extends Component {
   );
   }
 }
-
-// export default ExpertUnit;
-
-function mapStateToProps(state){
-  const experts = state.expert_unit_state;
-  return {experts}
-}
-export default connect(mapStateToProps)(ExpertUnit);

@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 
 import FirstFeatureBanner from './FirstFeatureBanner';
 import HorizontalUnit from './HorizontalUnit';
 
 
-class PickUpUnit extends Component {
+export class PickUpUnit extends Component {
   static PropTypes = {
     pickupunit: PropTypes.object.isRequired
   };
@@ -35,9 +34,3 @@ class PickUpUnit extends Component {
     );
   }
 }
-
-function mapStateToProps(state){
-  const pickupunit = JSON.parse(JSON.stringify(state.pickup_unit_state));;
-  return {pickupunit}
-}
-export default connect(mapStateToProps)(PickUpUnit);

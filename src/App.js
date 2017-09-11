@@ -7,17 +7,25 @@ import {configureStore} from './stores/index';
 
 
 //Component
-import Header from './components/Header/Header';
-import TodayContestRanking from "./components/TodayContestRanking/TodayContestRanking"
-import PickUpUnit from "./components/PickUpUnit/PickUpUnit"
-import TodayBestFriend from "./components/TodayBestFriend/TodayBestFriend"
-import RankingUnit from "./components/RankingUnit/RankingUnit"
-import CommonUnit from "./components/CommonUnit/CommonUnit"
-import Psychological from "./components/Psychological/Psychological"
-import ExpertUnit from "./components/ExpertUnit/ExpertUnit"
-import Tags from "./components/Tags/Tags"
+// import Header from './components/Header/Header';
+// import TodayContestRanking from "./components/TodayContestRanking/TodayContestRanking"
+// import PickUpUnit from "./components/PickUpUnit/PickUpUnit"
+// import TodayBestFriend from "./components/TodayBestFriend/TodayBestFriend"
+// import RankingUnit from "./components/RankingUnit/RankingUnit"
+// import CommonUnit from "./components/CommonUnit/CommonUnit"
+// import Psychological from "./components/Psychological/Psychological"
+// import ExpertUnit from "./components/ExpertUnit/ExpertUnit"
+// import Tags from "./components/Tags/Tags"
 
-import TrackList from './components/TrackList/TrackList'
+import HeaderContainer from './containers/Header/HeaderContainer';
+import CommonUnitContainer from './containers/CommonUnit/CommonUnitContainer';
+import TodayContestRankingContainer from './containers/TodayContestRanking/TodayContestRankingContainer';
+import PickUpUnitContainer from './containers/PickUpUnit/PickUpUnitContainer';
+import TodayBestFriendContainer from './containers/TodayBestFriend/TodayBestFriendContainer';
+import RankingUnitContainer from './containers/RankingUnit/RankingUnitContainer';
+import PsychologicalContainer from './containers/Psychological/PsychologicalContainer';
+import ExpertUnitContainer from './containers/ExpertUnit/ExpertUnitContainer';
+import TagsContainer from './containers/Tags/TagsContainer';
 
 import style from './App.css';
 
@@ -52,16 +60,15 @@ class App extends Component {
     return(
       <Provider store={store}>
         <div className="App">
-          <TrackList />
-          <Header />
-          <TodayContestRanking />
-          <PickUpUnit />
-          <TodayBestFriend />
-          <RankingUnit />
-          <CommonUnit />
-          <Psychological />
-          <ExpertUnit />
-          <Tags />
+          <HeaderContainer />
+          <TodayContestRankingContainer />
+          <PickUpUnitContainer />
+          <TodayBestFriendContainer />
+          <RankingUnitContainer />
+          <CommonUnitContainer />
+          <PsychologicalContainer />
+          <ExpertUnitContainer />
+          <TagsContainer />
         </div>
       </Provider>
     );

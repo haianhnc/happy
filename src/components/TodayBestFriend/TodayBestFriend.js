@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';  
 
 
 import HeartBar from './HeartBar'
@@ -8,7 +7,7 @@ import GotoLineButton from './GotoLineButton'
 
 import user_icon from '../images/user_icon.png'
 
-class TodayBestFriend extends Component {
+export class TodayBestFriend extends Component {
   static PropTypes = {
     bestfriend: PropTypes.object.isRequired
   };
@@ -40,11 +39,3 @@ class TodayBestFriend extends Component {
       );
   }
 }
-
-// export default TodayBestFriend;
-
-function mapStateToProps(state){
-  const todaybestfriend = JSON.parse(JSON.stringify(state.today_best_friend_state));;
-  return {todaybestfriend}
-}
-export default connect(mapStateToProps)(TodayBestFriend);

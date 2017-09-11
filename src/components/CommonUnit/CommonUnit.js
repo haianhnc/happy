@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 
 import VerticalUnit from './VerticalUnit'
 
-class CommonUnit extends Component {
+export class CommonUnit extends Component {
   static PropTypes = {
     common: PropTypes.objectisRequired
   };
@@ -32,9 +31,3 @@ class CommonUnit extends Component {
       );
   }
 }
-
-function mapStateToProps(state){
-  const common = JSON.parse(JSON.stringify(state.common_unit_state));;
-  return {common}
-}
-export default connect(mapStateToProps)(CommonUnit);

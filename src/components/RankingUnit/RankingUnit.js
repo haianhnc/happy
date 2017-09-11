@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';  
 
 import RankRow from "./RankRow"
-class RankingUnit extends Component {
+export class RankingUnit extends Component {
   static PropTypes = {
     rankingunit: PropTypes.object.isRequired
   };
@@ -31,12 +30,3 @@ class RankingUnit extends Component {
       );
   }
 }
-
-// export default RankingUnit;
-
-
-function mapStateToProps(state){
-  const rankingunit = JSON.parse(JSON.stringify(state.today_ranking_unit_state));;
-  return {rankingunit}
-}
-export default connect(mapStateToProps)(RankingUnit);
