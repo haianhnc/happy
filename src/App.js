@@ -44,7 +44,7 @@ var TAGS = {title: 'tag', tags: ['tag1', 'tag2', 'tag3', 'tag4']}
 
 
 const store = configureStore();
-store.dispatch(actions.setHeader(HEADER));
+// store.dispatch(actions.setHeader(HEADER));
 store.dispatch(actions.setTodayContestRanking(CONTEST));
 store.dispatch(actions.setPickUpUnit(PICKUPUNIT));
 store.dispatch(actions.setTodayBestFriend(BESTFRIEND));
@@ -74,46 +74,5 @@ class App extends Component {
     );
   }
 }
-
-// class MainBoard extends Component {
-  
-//  render(){
-//     return(
-//       <div className="App">
-//         <Header header={this.props.header} />
-//         <TodayContestRanking contest={this.props.contest} />
-//         <PickUpUnit pickupunit={this.props.pickupunit} />
-//         <TodayBestFriend bestfriend={this.props.bestfriend} />
-//         <RankingUnit rankingunit={this.props.rankingunit} />
-//         <CommonUnit common={this.props.common}/>
-//         <Psychological psychological={this.props.psychological}/>
-//         <ExpertUnit experts={EXPERTS}/>
-//         <Tags tags={TAGS}/>
-//       </div>
-//     );
-//   }
-// }
-
-
-
-// class App extends Component {
-//   render() {
-//     return (
-//       <Provider store={store}>
-//         <MainBoard 
-//           header={HEADER} 
-//           contest={CONTEST} 
-//           pickupunit={PICKUPUNIT}
-//           bestfriend={BESTFRIEND}
-//           rankingunit={RANKINGUNIT}
-//           common={COMMON}
-//           psychological= {PSYCHOLOICAL}
-//           experts = {EXPERTS}
-//           tags = {TAGS}
-//         />
-//       </Provider>
-//     );
-//   }
-// }
 
 export default App;

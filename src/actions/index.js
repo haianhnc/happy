@@ -9,6 +9,9 @@ import {setPsychological} from './Psychological';
 import {setExpertUnit} from './ExpertUnit';
 import {setTags} from './Tags';
 
+
+import {setActiveTab} from './header';
+
 export {
 	setTracks,
   setHeader,
@@ -19,5 +22,6 @@ export {
   setCommonUnit,
   setPsychological,
   setExpertUnit,
-  setTags
+  setTags,
+  setActiveTab
 };
