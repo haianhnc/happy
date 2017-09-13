@@ -9,11 +9,13 @@ import close_button from '../images/close_button.png'
 
 export class Header extends Component {
   constructor(){
-    debugger;
     super();
-    var HEADER = {title: 'Happy', menu_list: ['tab1', 'tab2', 'tab3', 'tab4', 'tab5'], left_menu_button: 'left_menu.png', close_button: 'close_button.png', active_tab: 0}
-    const store = configureStore();
-    store.dispatch(actions.setHeader(HEADER));
+  }
+
+  componentDidMount(){
+    debugger;
+    let onLoad = this.props.onLoad;
+    onLoad();
   }
 
   static PropTypes = {
@@ -25,18 +27,25 @@ export class Header extends Component {
   };
 
   render(){
-    debugger;
     let header = this.props.header;
+
+    if(header == "")
+      return(<div></div>);
+
     let header_title = header.title;
     let menu_lists = header.menu_list;
     let onClick = this.props.onClick;
+
     let rows = [];
 
     menu_lists.forEach(function(tab, key){
       rows.push(<li key={key}>
         <a 
           href="#"
-          onClick={onClick(key)}
+          onClick={e => {
+           e.preventDefault()
+           onClick(key)
+         }}
         >{tab}</a></li>);
     });
 
