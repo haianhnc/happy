@@ -19,7 +19,7 @@ import Tags from "./components/Tags/Tags"
 
 import TrackList from './components/TrackList/TrackList'
 
-import style from './App.css';
+import style from '../css/App.css';
 
 
 
@@ -51,58 +51,58 @@ const store = configureStore();
 // store.dispatch(actions.setTracks(tracks));
 store.dispatch(actions.setHeader(HEADER));
 
-class App extends Component {
-  render(){
-    return(
-      <Provider store={store}>
-        <div className="App">
-          <TrackList />
-          <Header />
-        </div>
-      </Provider>
-    );
-  }
-}
-
-// class MainBoard extends Component {
-  
-//  render(){
-//     return(
-//       <div className="App">
-//         <Header header={this.props.header} />
-//         <TodayContestRanking contest={this.props.contest} />
-//         <PickUpUnit pickupunit={this.props.pickupunit} />
-//         <TodayBestFriend bestfriend={this.props.bestfriend} />
-//         <RankingUnit rankingunit={this.props.rankingunit} />
-//         <CommonUnit common={this.props.common}/>
-//         <Psychological psychological={this.props.psychological}/>
-//         <ExpertUnit experts={EXPERTS}/>
-//         <Tags tags={TAGS}/>
-//       </div>
-//     );
-//   }
-// }
-
-
-
 // class App extends Component {
-//   render() {
-//     return (
+//   render(){
+//     return(
 //       <Provider store={store}>
-//         <MainBoard 
-//           header={HEADER} 
-//           contest={CONTEST} 
-//           pickupunit={PICKUPUNIT}
-//           bestfriend={BESTFRIEND}
-//           rankingunit={RANKINGUNIT}
-//           common={COMMON}
-//           psychological= {PSYCHOLOICAL}
-//           experts = {EXPERTS}
-//           tags = {TAGS}
-//         />
+//         <div className="App">
+//           <TrackList />
+//           <Header />
+//         </div>
 //       </Provider>
 //     );
 //   }
 // }
+
+class MainBoard extends Component {
+  
+ render(){
+    return(
+      <div className="App">
+        <Header header={this.props.header} />
+        <TodayContestRanking contest={this.props.contest} />
+        <PickUpUnit pickupunit={this.props.pickupunit} />
+        <TodayBestFriend bestfriend={this.props.bestfriend} />
+        <RankingUnit rankingunit={this.props.rankingunit} />
+        <CommonUnit common={this.props.common}/>
+        <Psychological psychological={this.props.psychological}/>
+        <ExpertUnit experts={EXPERTS}/>
+        <Tags tags={TAGS}/>
+      </div>
+    );
+  }
+}
+
+
+
+class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <MainBoard 
+          header={HEADER} 
+          contest={CONTEST} 
+          pickupunit={PICKUPUNIT}
+          bestfriend={BESTFRIEND}
+          rankingunit={RANKINGUNIT}
+          common={COMMON}
+          psychological= {PSYCHOLOICAL}
+          experts = {EXPERTS}
+          tags = {TAGS}
+        />
+      </Provider>
+    );
+  }
+}
 
 export default App;
